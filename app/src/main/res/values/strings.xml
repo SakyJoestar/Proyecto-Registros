@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Registros v1</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Agregar Registro</string>
+    <string name="menu_gallery">Registros</string>
+    <string name="menu_slideshow">Utilidades</string>
+    <string name="modelo_del_carro">Modelo del Carro:</string>
+    <string name="orden_de_trabajo">Orden de Trabajo:</string>
+    <string name="placa">Placa:</string>
+    <string name="lugar">Lugar:</string>
+    <string name="fecha">Fecha:</string>
+    <string name="serial">Serial:</string>
+    <string name="accesorio">Accesorio:</string>
+    <string name="fecha_manual">Fecha manual</string>
+    <string name="AgregarString">Agregar</string>
+    <string name="nombreAccString">Nombre del Accesorio</string>
+    <string name="valorAcces">Valor del Accesorio</string>
+    <string name="nombreLugarString">Nombre del Lugar</string>
+    <string name="valorAgregadoLug">Valor Agregado del Lugar</string>
+    <string name="onix">Onix...</string>
+    <string name="aaa000">AAA000</string>
+    <string name="aa123456">AA123456</string>
+    <string name="_000000">000000</string>
+    <string name="_01_01_2022">01/01/2022</string>
+    <string name="Fecha">Fecha</string>
+    <string name="btnNuevoString">Nuevo</string>
+    <string name="btnAgregarString">Agregar</string>
+    <string name="accesorioAddString">Manejar Accesorios</string>
+    <string name="LugarAddString">Manejar Lugares</string>
+    <string name="EditarString">EDITAR</string>
+    <string name="EliminarString">ELIMINAR</string>
+</resources>
