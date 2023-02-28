@@ -141,15 +141,13 @@
 
                 <Button
                     android:id="@+id/btnAgregarLugar"
-                    android:layout_width="wrap_content"
+                    android:layout_width="110dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="22dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginEnd="285dp"
                     android:layout_marginBottom="20dp"
                     android:text="@string/AgregarString"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txtValorLugar" />
 
@@ -180,7 +178,7 @@
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="28dp"
+                    android:layout_marginTop="30dp"
                     android:text="@string/EditarString"
                     app:layout_constraintStart_toEndOf="@+id/btnAgregarAcc"
                     app:layout_constraintTop_toBottomOf="@+id/etValorAcc" />
@@ -190,12 +188,38 @@
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="28dp"
+                    android:layout_marginTop="30dp"
                     android:layout_marginEnd="20dp"
                     android:text="@string/EliminarString"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/btnEditarAcc"
                     app:layout_constraintTop_toBottomOf="@+id/etValorAcc" />
+
+                <Button
+                    android:id="@+id/btnEditarLugar"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/EditarString"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btnAgregarLugar"
+                    app:layout_constraintTop_toBottomOf="@+id/txtValorLugar" />
+
+                <Button
+                    android:id="@+id/btnEliminarLugar"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/EliminarString"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btnEditarLugar"
+                    app:layout_constraintTop_toBottomOf="@+id/txtValorLugar" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

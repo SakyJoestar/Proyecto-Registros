@@ -31,7 +31,7 @@ public class SlideshowFragment extends Fragment {
     private FragmentSlideshowBinding binding;
     private TextView txtUtiAccesorio, txtUtiLugar;
     private EditText etNombreAcc, etValorAcc, etNombreLugar, etValorLugar;
-    private Button btnAgregarAccesorio, btnEditarAccesorio, btnEliminarAccesorio, btnAgregarLugar;
+    private Button btnAgregarAccesorio, btnEditarAccesorio, btnEliminarAccesorio, btnAgregarLugar, btnEditarLugar, btnEliminarLugar;
     private Spinner spListaAccesorio, spListaLugar;
     public DbAccesorios dbAccesorios;
     private ArrayList<Accesorio> accesoriosList;
@@ -72,7 +72,10 @@ public class SlideshowFragment extends Fragment {
         btnAgregarAccesorio = (Button) view.findViewById(R.id.btnAgregarAcc);
         btnEditarAccesorio = (Button) view.findViewById(R.id.btnEditarAcc);
         btnEliminarAccesorio = (Button) view.findViewById(R.id.btnEliminarAcc);
+
         btnAgregarLugar = (Button) view.findViewById(R.id.btnAgregarLugar);
+        btnEditarAccesorio = (Button) view.findViewById(R.id.btnEditarLugar);
+        btnEliminarLugar = (Button) view.findViewById(R.id.btnEliminarLugar);
 
         //Spinnner
         spListaAccesorio = (Spinner) view.findViewById(R.id.spinnerAddAcce);
