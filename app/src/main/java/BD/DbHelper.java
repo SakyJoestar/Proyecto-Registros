@@ -31,8 +31,8 @@ public class DbHelper extends SQLiteOpenHelper
 
         baseDeDatos.execSQL
                 ("CREATE TABLE " + TABLE_REGISTROS +
-                        "(ID INTEGER PRIMARY KEY AUTOINCREMENT," + "FECHA Fecha NOT NULL," + "MODELO TEXT NOT NULL," + " PLACA TEXT," +
-                        "" + "ORDEN INTEGER," + "ACCESORIO TEXT," + "LUGAR TEXT," + "VALOR INTEGER, " + "ESTADO BOOLEAN )");
+                        "(ID INTEGER PRIMARY KEY AUTOINCREMENT,"  + "MODELO TEXT NOT NULL," + "PLACA TEXT," + "SERIE TEXT," +
+                        "" + "ORDEN INTEGER NOT NULL," + "ACCESORIO TEXT NOT NULL," + "LUGAR TEXT NOT NULL,"  + "VALOR_TOTAL INTEGER NOT NULL, " + "FECHA TEXT NOT NULL,"  + "ESTADO BIT NOT NULL )");
     }
 
     @Override

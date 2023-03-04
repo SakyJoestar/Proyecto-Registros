@@ -4,15 +4,17 @@ public class Lugar
 {
     private String nombre;
     private int valorAgregado;
-    private static int numero;
-    private final int id;
+    private  int id;
 
     public Lugar(String auxNombre, int auxValorAgregado)
     {
-        numero++;
-        this.id = numero;
         this.nombre = auxNombre;
         this.valorAgregado = auxValorAgregado;
+    }
+
+    public Lugar()
+    {
+
     }
 
     public String getNombre()
@@ -39,15 +41,14 @@ public class Lugar
     {
         return id;
     }
-
-    public static void setNumeroLugar(int auxNumero)
+    public void setId(int auxId)
     {
-        Lugar.numero = auxNumero;
+        this.id = auxId;
     }
 
     public String toString()
     {
-        String datos = nombre + " - " + valorAgregado;
+        String datos =nombre;
         return datos;
     }
 }

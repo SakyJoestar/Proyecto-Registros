@@ -21,7 +21,6 @@ import com.google.android.material.navigation.NavigationView;
 import java.util.ArrayList;
 
 import modelo.Accesorio;
-import modelo.FuncionesGlobales;
 import modelo.Lugar;
 import modelo.RegistroInstalaciones;
 
@@ -35,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
     public static Spinner spLugar;
     private CheckBox cbFecha;
     private Button btnFecha, btnNuevo, btnAgregar, btnAgregarAccesorio, getBtnAgregarLugar;
-    private FuncionesGlobales funcionesGlobales;
     private ArrayList<Lugar> listaLugares;
     private ArrayList<Accesorio> listaAccesorios;
     private ArrayList<RegistroInstalaciones> listaRegistros;
@@ -60,8 +58,6 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-
-        FuncionesGlobales funcionesGlobales = new FuncionesGlobales();
 
         /*
         //Asignar ventana home

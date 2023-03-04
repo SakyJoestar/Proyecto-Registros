@@ -47,7 +47,7 @@ public class Accesorio
         this.nombre = nombre;
     }
 
-    public double getValor()
+    public int getValor()
     {
         return valor;
     }
@@ -59,7 +59,7 @@ public class Accesorio
 
     public String toString()
     {
-        String datos = id + " - " + nombre + " - " + valor;
+        String datos = nombre;
         return datos;
     }
 }

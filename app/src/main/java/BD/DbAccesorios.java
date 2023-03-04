@@ -37,7 +37,9 @@ public class DbAccesorios extends DbHelper
             id = db.insert(TABLE_ACCESORIOS, null, accesorio);
             db.close();
 
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             e.toString();
         }
 
@@ -52,23 +54,23 @@ public class DbAccesorios extends DbHelper
         ArrayList<Accesorio> listaAccesorios = new ArrayList<>();
         Accesorio accesorio = null;
 
-        Cursor cursorContactos = null;
+        Cursor cursor = null;
 
-        cursorContactos = db.rawQuery("SELECT * FROM " + TABLE_ACCESORIOS, null);
+        cursor = db.rawQuery("SELECT * FROM " + TABLE_ACCESORIOS, null);
 
-        if(cursorContactos.moveToFirst())
+        if(cursor.moveToFirst())
         {
             do
             {
              accesorio = new Accesorio();
-             accesorio.setId(Integer.parseInt(cursorContactos.getString(0)));
-             accesorio.setNombre(cursorContactos.getString(1));
-             accesorio.setValor(Integer.parseInt(cursorContactos.getString(2)));
+             accesorio.setId(Integer.parseInt(cursor.getString(0)));
+             accesorio.setNombre(cursor.getString(1));
+             accesorio.setValor(Integer.parseInt(cursor.getString(2)));
 
              listaAccesorios.add(accesorio);
-            }while (cursorContactos.moveToNext());
+            }while (cursor.moveToNext());
         }
-        cursorContactos.close();
+        cursor.close();
 
         return listaAccesorios;
     }
@@ -80,22 +82,45 @@ public class DbAccesorios extends DbHelper
 
         Accesorio accesorio = null;
 
-        Cursor cursorContactos = null;
+        Cursor cursor = null;
 
-        cursorContactos = db.rawQuery("SELECT * FROM " + TABLE_ACCESORIOS + " WHERE id = " + "id" + " LIMIT 1", null);
+        cursor = db.rawQuery("SELECT * FROM " + TABLE_ACCESORIOS + " WHERE id = " + "id" + " LIMIT 1", null);
 
-        if(cursorContactos.moveToFirst())
+        if(cursor.moveToFirst())
         {
             accesorio = new Accesorio();
-            accesorio.setId(Integer.parseInt(cursorContactos.getString(0)));
-            accesorio.setNombre(cursorContactos.getString(1));
-            accesorio.setValor(Integer.parseInt(cursorContactos.getString(2)));
+            accesorio.setId(Integer.parseInt(cursor.getString(0)));
+            accesorio.setNombre(cursor.getString(1));
+            accesorio.setValor(Integer.parseInt(cursor.getString(2)));
 
         }
 
-        cursorContactos.close();
+        cursor.close();
 
         return accesorio;
+    }
+
+    public boolean editarAccesorio(int id, String auxNombre, int auxValor)
+    {
+        boolean valido = false;
+        DbHelper dbHelper = new DbHelper(context);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+        try
+        {
+            db.execSQL(" UPDATE " + TABLE_ACCESORIOS + " SET NOMBRE = ' " + auxNombre + " ', PRECIO = ' " + auxValor + " ' WHERE id = ' " + id +  " ' ");
+            valido = true;
+
+        } catch (Exception e) {
+            e.toString();
+            valido = false;
+        }
+        finally
+        {
+            db.close();
+        }
+
+        return valido;
     }
 
     public boolean eliminarAccesorio(int id)

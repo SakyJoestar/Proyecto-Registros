@@ -2,42 +2,54 @@ package modelo;
 
 public class RegistroInstalaciones
 {
-    private Fecha fecha;
+    private String fecha;
     private String modeloVehiculo;
     private String placa;
     private String serie;
-    private int ordenDeTrabajo;
-    private Accesorio accesorio;
-    private double valor;
-    private Lugar lugar;
+    private String ordenDeTrabajo;
+    private String accesorio;
+    private int valor;
+    private String lugar;
+    private boolean estado;
 
     private  int id;
 
-    public RegistroInstalaciones(Fecha auxFecha, String auxModeloVehiculo, String auxPlaca, int auxOrden, Accesorio auxAccesorio, double auxValor, Lugar auxLugar)
+    //Constructor con Placa
+    /*
+    public RegistroInstalaciones(String auxModeloVehiculo, String auxPlaca, String auxOrden, String auxAccesorio,  String auxLugar, int auxValor, String auxFecha)
     {
-        this.fecha = auxFecha;
         this.modeloVehiculo = auxModeloVehiculo;
         this.placa = auxPlaca;
         this.ordenDeTrabajo = auxOrden;
         this.accesorio = auxAccesorio;
         this.valor = auxValor;
         this.lugar = auxLugar;
+        this.fecha = auxFecha;
+        this.estado = false;
+        this.serie = "";
     }
 
-    public RegistroInstalaciones(Fecha auxFecha, String auxModeloVehiculo,  int auxOrden, Accesorio auxAccesorio, double auxValor, Lugar auxLugar, String auxSerie)
-    {
+     */
 
-        this.fecha = auxFecha;
+    //Constructor con Serie
+    /*
+    public RegistroInstalaciones(String auxModeloVehiculo, String auxOrden, String auxAccesorio, String auxLugar, String auxSerie, int auxValor, String auxFecha)
+    {
         this.modeloVehiculo = auxModeloVehiculo;
         this.serie = auxSerie;
         this.ordenDeTrabajo = auxOrden;
         this.accesorio = auxAccesorio;
         this.valor = auxValor;
         this.lugar = auxLugar;
+        this.fecha = auxFecha;
+        this.estado = false;
+        this.placa = "";
     }
 
+     */
 
-    public RegistroInstalaciones(Fecha auxFecha, String auxModeloVehiculo, String auxPlaca, String auxSerie, int auxOrden, Accesorio auxAccesorio, double auxValor, Lugar auxLugar)
+    //Constructor con ambos
+    public RegistroInstalaciones(String auxModeloVehiculo, String auxPlaca, String auxSerie, String auxOrden, String auxAccesorio, String auxLugar, int auxValor, String auxFecha)
     {
         this.fecha = auxFecha;
         this.modeloVehiculo = auxModeloVehiculo;
@@ -47,6 +59,12 @@ public class RegistroInstalaciones
         this.accesorio = auxAccesorio;
         this.valor = auxValor;
         this.lugar = auxLugar;
+        this.estado = false;
+    }
+
+    public RegistroInstalaciones()
+    {
+
     }
 
     public int getId()
@@ -54,12 +72,12 @@ public class RegistroInstalaciones
         return id;
     }
     public void setId(int auxid){this.id = auxid;}
-    public Fecha getFecha()
+    public String getFecha()
     {
         return fecha;
     }
 
-    public void setFecha(Fecha fecha)
+    public void setFecha(String fecha)
     {
         this.fecha = fecha;
     }
@@ -94,42 +112,52 @@ public class RegistroInstalaciones
         this.serie = serie;
     }
 
-    public int getOrdenDeTrabajo()
+    public String getOrdenDeTrabajo()
     {
         return ordenDeTrabajo;
     }
 
-    public void setOrdenDeTrabajo(int ordenDeTrabajo)
+    public void setOrdenDeTrabajo(String ordenDeTrabajo)
     {
         this.ordenDeTrabajo = ordenDeTrabajo;
     }
 
-    public Accesorio getAccesorio() {
+    public String getAccesorio() {
         return accesorio;
     }
 
-    public void setAccesorio(Accesorio accesorio)
+    public void setAccesorio(String accesorio)
     {
         this.accesorio = accesorio;
     }
 
-    public double getValor()
+    public int getValor()
     {
         return valor;
     }
 
-    public void setValor(double valor)
+    public void setValor(int valor)
     {
         this.valor = valor;
     }
 
-    public Lugar getLugar()
+    public String getLugar()
     {
         return lugar;
     }
 
-    public void setLugar(Lugar lugar)
+    public void setLugar(String lugar)
     {
         this.lugar = lugar;
+    }
+
+    public boolean getEstado()
+    {
+        return estado;
+    }
+
+    public void setEstado(boolean estado)
+    {
+        this.estado = estado;
     }
 }

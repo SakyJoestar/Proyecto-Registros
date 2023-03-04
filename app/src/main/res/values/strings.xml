@@ -29,10 +29,11 @@
     <string name="_000000">000000</string>
     <string name="_01_01_2022">01/01/2022</string>
     <string name="Fecha">Fecha</string>
-    <string name="btnNuevoString">Nuevo</string>
-    <string name="btnAgregarString">Agregar</string>
+    <string name="btnNuevoString">LIMPIAR</string>
+    <string name="btnAgregarString">AGREGAR</string>
     <string name="accesorioAddString">Manejar Accesorios</string>
     <string name="LugarAddString">Manejar Lugares</string>
     <string name="EditarString">EDITAR</string>
     <string name="EliminarString">ELIMINAR</string>
+    <string name="TresPuntos">...</string>
 </resources>
